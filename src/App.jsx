@@ -190,7 +190,7 @@ function App() {
 
     const link = document.createElement('a');
     link.href = imageURL;
-    link.download = 'mi_dibujo.png';
+    link.download = 'doodler@my-drawing.png';
     link.click();
   };
 
