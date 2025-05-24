@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    margin: 30px auto;
+    margin-bottom: 0;
+    width: fit-content;
+    gap: 80px;
+    padding: 0 30px;
+}
+
+.button {
+    background-color: transparent;
+    border-radius: 13px;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.032);
+}
+
+.button_disable:hover {
+    background-color: transparent;
+    cursor: default;
+}
+
+.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.fadeIn {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.4s ease;
+}
+
+.fadeOpacity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+.fadeOpacityHidden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    position: absolute;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

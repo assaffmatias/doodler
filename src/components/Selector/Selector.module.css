@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    margin: 30px auto;
+    margin-bottom: 0;
+    width: fit-content;
+    gap: 40px;
+    padding: 0 30px;
+    background-color: rgb(246, 246, 246);
+    border-radius: 24px;
+    border: 1px solid rgba(128, 128, 128, 0.304);
+    max-height: 100px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.hide {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    position: absolute;
+}
+
+.colors_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.colors_content {
+    display: flex;
+    gap: 10px;
+}
+
+.streak_container {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+}
+
+.streak_content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f6f6f6;
+    border: 1px solid rgba(128, 128, 128, 0.304);
+    padding: 10px 15px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+}
+
+.container:hover .streak_container {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+}
+
+.streak_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.streak {
+    transition: .3s;
+}
+
+.pen_container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.activePen {
+    margin-top: 50px;
+}
+
+.brush_svg {
+    transition: .3s;
+}
+
+@keyframes showIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        box-sizing: border-box;
+        max-width: 95vw;
+        gap: 5px;
+    }
+
+    .pen_container {
+        min-width: fit-content;
+        gap: 0;
+    }
+}
